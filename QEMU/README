@@ -4,7 +4,8 @@ under QEMU. If you do not intend to create your own images, ignore this.
 Installing QEMU
 ----------------
 
-To create a new disk you'll need to install QEMU. On an Ubuntu host you can get it up and running by installing the following packages: 
+To create a new disk you'll need to install QEMU. On an Ubuntu host you can get
+it up and running by installing the following packages: 
 - qemu
 - qemu-system
 - qemu-user
@@ -28,5 +29,11 @@ Installing Debian
 
 To start the install on the disk you've just create just run the following:
 
-qemu-system-arm -m 1024 -M versatilepb -kernel boot/vmlinuz-3.2.0-4-versatile -initrd boot/initrd.gz -hda linuxdisk -append "root=/dev/ram"
+qemu-system-arm \
+	-m 1024 \
+	-M versatilepb \
+	-kernel boot/vmlinuz-3.2.0-4-versatile \
+	-initrd boot/initrd.gz \
+	-hda linuxdisk \
+	-append "root=/dev/ram"
 
